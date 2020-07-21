@@ -1,5 +1,6 @@
 var db = require('./db');
- var template = require('./template.js');
+var template = require('./template.js');
+var url = require('url');
 
  exports.home = function(request, response){
      db.query(`SELECT * FROM topic`, function(error,topics){
@@ -166,3 +167,4 @@ exports.delete_process = function(request, response){
             response.end();
           });
       });
+}
